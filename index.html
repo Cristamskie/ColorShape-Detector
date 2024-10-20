@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ColorShape Identifier</title>
+    <link rel="stylesheet" href="wex.css">
+</head>
+<body>
+    <div class="container">
+        <h1>ColorShape Identifier</h1>
+        <label for="imageUpload" class="upload-button">
+        Upload File
+        </label>
+        <input type="file" id="imageUpload" accept="image/*" style="display: none;">
+        
+        <div id="imagePreview">
+            <img id="uploadedImage" src="" alt="Uploaded Image" style="display: none; max-width: 100%; height: auto;">
+        </div>
+        
+        
+        <canvas id="canvas"></canvas>
+        <div id="result">
+            <h2>IDENTIFIED DATA</h2>
+            <p><strong>Color: </strong><span id="dominantColor"></span></p>
+            <p><strong>Shape: </strong><span id="detectedShape"></span></p>
+        </div>
+    </div>
+
+    <script src="exort.js"></script>
+</body>
+</html>
