@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ColorShape Identifier</title>
+    <link rel="stylesheet" href="wex.css">
+</head>
+    <script>
+        if (!sessionStorage.getItem('access_granted')) {
+            window.location.href = 'index.html';
+        } else {
+            sessionStorage.removeItem('access_granted');
+        }
+    </script>
+    <p class="content">Explore the world of visual recognition with our website that detects<br>and identifies shapes 
+        and colors. Upload images to receive instant<br>feedback on their elements, 
+        making it a fun and educational tool for<br>artists, students, and curious minds alike!
+        <br><br><br>
+Four Basic Shapes:</p>
+        <div class="left-div">
+            <div class="image-container">
+                <img src="Circle01.jpeg" alt="Circle">
+                <span class="image-text">Circle</span>
+            </div>
+            <div class="image-container">
+                <img src="Rectangle01.jpg" alt="Rectangle">
+                <span class="image-text">Rectangle</span>
+            </div>
+            <div class="image-container">
+                <img src="Square 01.jpeg" alt="Square">
+                <span class="image-text">Square</span>
+            </div>
+            <div class="image-container">
+                <img src="Triangle01.jpeg" alt="Triangle">
+                <span class="image-text">Triangle</span>
+            </div>
+        </div>
+        
+    <div class="container1">
+        <h1 class="page2">ColorShape Identifier</h1>
+        <label for="imageUpload" class="upload-button">Upload Image</label>
+        <input type="file" id="imageUpload" accept="image/*" style="display: none;">
+        
+        <div id="imagePreview">
+            <img id="uploadedImage" src="" alt="Uploaded Image" style="display: none; max-width: 100%; height: auto;">
+        </div>
+        <div class="canvas-container">
+            <canvas id="canvas" style="border: 1px solid #F2F4F7;"></canvas>
+            <Your id="placeholderText" class="placeholder-text">Your image here</div>
+        
+            <div id="result">
+                <h2>IDENTIFIED DATA</h2>
+                <div id="combinedResult"></div>
+            </div>
+                
+    </div>
+
+    <script src="https://docs.opencv.org/4.x/opencv.js" async></script>
+    <script src="exort.js"></script>
+</body>
+</html>
