@@ -7,26 +7,19 @@
     <link rel="stylesheet" href="wex.css">
 </head>
 <body>
+    
     <div class="container">
-        <h1>ColorShape Identifier</h1>
-        <label for="imageUpload" class="upload-button">
-        Upload File
-        </label>
-        <input type="file" id="imageUpload" accept="image/*" style="display: none;">
-        
-        <div id="imagePreview">
-            <img id="uploadedImage" src="" alt="Uploaded Image" style="display: none; max-width: 100%; height: auto;">
-        </div>
-        
-        
-        <canvas id="canvas"></canvas>
-        <div id="result">
-            <h2>IDENTIFIED DATA</h2>
-            <p><strong>Color: </strong><span id="dominantColor"></span></p>
-            <p><strong>Shape: </strong><span id="detectedShape"></span></p>
-        </div>
+        <h1 class="frontpage">ColorShape Identifier</h1>
+        <p class = "definition">A website that detects a shape and its color.</p>
+        <button id="startButton"class="start-button">START</button>
     </div>
 
-    <script src="exort.js"></script>
+    <script>
+        
+        document.getElementById('startButton').addEventListener('click', function() {
+            sessionStorage.setItem('access_granted', 'true'); 
+            window.location.href = 'quas.html'; 
+        });
+    </script>
 </body>
 </html>
